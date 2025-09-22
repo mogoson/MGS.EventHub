@@ -1,0 +1,16 @@
+{
+    "name": "MGS.EventHub.Sample",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ad01ce42dc850bc4ba9786137ea4ad2a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

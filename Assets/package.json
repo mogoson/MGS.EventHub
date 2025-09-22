@@ -1,0 +1,25 @@
+{
+    "name": "com.mgs.eventhub",
+    "version": "1.0.0",
+    "displayName": "Event Hub",
+    "description": "Hub for Event subscribe and unsubscribe and spread",
+    "unity": "2021.3",
+    "keywords": [
+        "event",
+        "subscribe",
+        "unsubscribe",
+        "spread"
+    ],
+    "author": {
+        "name": "Mogoson",
+        "email": "mogoson@outlook.com",
+        "url": "https://github.com/mogoson"
+    },
+    "samples": [
+        {
+            "displayName": "Sample",
+            "description": "Sample for Event subscribe and unsubscribe and spread",
+            "path": "Samples~/Sample"
+        }
+    ]
+}
