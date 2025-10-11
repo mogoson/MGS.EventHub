@@ -22,6 +22,6 @@ namespace MGS.EventHub
 
         void Spread<T>(T arg);
 
-        void Disband();
+        void Clear();
     }
 }

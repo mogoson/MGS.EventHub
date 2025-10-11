@@ -17,11 +17,11 @@ namespace MGS.EventHub
 {
     public class EventHub : IEventHub
     {
-        protected IDictionary<Type, Delegate> registry = new Dictionary<Type, Delegate>();
+        protected IDictionary<int, Delegate> registry = new Dictionary<int, Delegate>();
 
         public void Subscribe<T>(Action<T> action)
         {
-            var key = typeof(T);
+            var key = typeof(T).GetHashCode();
             if (registry.ContainsKey(key))
             {
                 registry[key] = Delegate.Combine(registry[key], action);
@@ -34,7 +34,7 @@ namespace MGS.EventHub
 
         public void Unsubscribe<T>(Action<T> action)
         {
-            var key = typeof(T);
+            var key = typeof(T).GetHashCode();
             if (registry.ContainsKey(key))
             {
                 var actions = Delegate.Remove(registry[key], action);
@@ -51,14 +51,14 @@ namespace MGS.EventHub
 
         public void Spread<T>(T arg)
         {
-            var key = typeof(T);
+            var key = typeof(T).GetHashCode();
             if (registry.ContainsKey(key))
             {
                 registry[key].DynamicInvoke(arg);
             }
         }
 
-        public void Disband()
+        public void Clear()
         {
             registry.Clear();
         }
